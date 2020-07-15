@@ -25,15 +25,21 @@ What I liked about EasyGerman is that their videos show both German and English
 subtitles. Understandably, though, most movies and TV-series offer
 one language only. Let me show you a few ways to merge two .srt together in one.
 
+---
+
 ## Before that, where do I find subtitles?
 
 Nowadays there are [multiple](https://www.opensubtitles.org/en/search/subs) databases
 online for that. Some even allow you to simply drop your video file unto them and it will
 show you all related .srts.
 
+---
+
 ## What if I have an .mkv with embedded subtitles?
 
 You first need to extract your .srt from the .mkv's tracks. You can use [this](https://mkvtoolnix.download/index.html).
+
+---
 
 ## First method: Online Services
 
@@ -50,6 +56,8 @@ You are welcomed to try them, but I've found it easier to just solve this proble
 <div align="center">
 	<img src="/assets/blog/20200704/topbottom.png">
 </div>
+
+---
 
 ## Second method: A Bit Of Python
  
@@ -107,6 +115,8 @@ as the python file, and execute `python subs.py` from your command line.
 <div align="center">
 	<img src="/assets/blog/20200704/bottom.png">
 </div>
+
+---
 
 While not perfect and quite rudimentary, it works out pretty well. 
 
