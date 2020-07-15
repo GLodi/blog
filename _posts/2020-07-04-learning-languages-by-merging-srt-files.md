@@ -4,7 +4,7 @@ layout: post
 category: blog
 author: giuliolodi
 image: /assets/blog/20200704/bottombig.png
-headerImage: true
+headerImage: false
 tag:
 - language
 - learning
@@ -47,9 +47,9 @@ two .srt and merge them. I've tried a bunch, however there are a few problems:
  
 You are welcomed to try them, but I've found it easier to just solve this problem on my own.
  
-![Full-width image](/assets/blog/20200704/topbottom.png){:.lead data-height="800" align="center"}
-Not very good. Hard to read both.
-{:.figure}
+<div align="center">
+	<img src="/assets/blog/20200704/topbottom.png">
+</div>
 
 ## Second method: A Bit Of Python
  
@@ -104,9 +104,9 @@ new.close()
 Now you simply need to rename your srts as shown in code, put both in the same directory
 as the python file, and execute `python subs.py` from your command line.
 
-![Full-width image](/assets/blog/20200704/bottom.png){:.lead data-height="800" align="center"}
-Much better.
-{:.figure}
+<div align="center">
+	<img src="/assets/blog/20200704/bottom.png">
+</div>
 
 While not perfect and quite rudimentary, it works out pretty well. 
 
