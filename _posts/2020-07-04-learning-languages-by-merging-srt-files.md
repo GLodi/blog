@@ -1,9 +1,16 @@
 ---
-title: Learning Languages by Merging SRTs
-image: /assets/img/blog/20200704/bottombig.png
-description: >
-   How to merge subtitles and improve
-   your language skills.
+title: "Learning Languages by Merging SRTs"
+layout: post
+category: blog
+author: giuliolodi
+image: /assets/blog/20200704/bottombig.png
+headerImage: true
+tag:
+- language
+- learning
+- subtitles
+date: 2020-07-04 10:00
+description: How to merge subtitles and improve your language skills.
 ---
 
 I've found that one of the most efficient ways to learn a foreign
@@ -40,7 +47,7 @@ two .srt and merge them. I've tried a bunch, however there are a few problems:
  
 You are welcomed to try them, but I've found it easier to just solve this problem on my own.
  
-![Full-width image](/assets/img/blog/20200704/topbottom.png){:.lead data-height="800" align="center"}
+![Full-width image](/assets/blog/20200704/topbottom.png){:.lead data-height="800" align="center"}
 Not very good. Hard to read both.
 {:.figure}
 
@@ -97,7 +104,7 @@ new.close()
 Now you simply need to rename your srts as shown in code, put both in the same directory
 as the python file, and execute `python subs.py` from your command line.
 
-![Full-width image](/assets/img/blog/20200704/bottom.png){:.lead data-height="800" align="center"}
+![Full-width image](/assets/blog/20200704/bottom.png){:.lead data-height="800" align="center"}
 Much better.
 {:.figure}
 
