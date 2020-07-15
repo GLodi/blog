@@ -1,6 +1,6 @@
 # main text of home
 name: Giulio Lodi
-bio: Android Flutter Golang. One espresso at a time
+bio: Android Flutter Golang. One espresso at a time.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -55,7 +55,7 @@ email: lodi.giulio@gmail.com
 authors:
   giuliolodi:
     name: Giulio Lodi
-    bio: Android Flutter Golang. One espresso at a time
+    bio: Android Flutter Golang. One espresso at a time.
     external-image: false
     picture: assets/images/profile.jpg
 

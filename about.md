@@ -35,5 +35,4 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 <ul>
 	<li><a href="https://github.com/GLodi/GitNav">GitNav</a></li>
 	<li><a href="https://github.com/GLodi/matchymatchy">matchymatchy</a></li>
-	<li><a href="https://github.com/">Dolor Lorem</a></li>
 </ul>
