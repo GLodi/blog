@@ -99,9 +99,9 @@ overlay (flutter-performance-overlay - P) and so on. Most importantly you can
 __hot-reload__ with __r__ and __restart__ with __R__. Needless to say you can
 remap all of this.
 
-![Full-width image](/assets/blog/20190506/flutter.png){:.lead data-width="800" align="center"}
-Yes, I like white themes.
-{:.figure}
+<div align="center">
+	<img src="/assets/blog/20190506/flutter.png">
+</div>
 
 ---
 
