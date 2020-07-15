@@ -1,13 +1,12 @@
 ---
-title: Flutter on Spacemacs
+title: "Flutter on Spacemacs"
 layout: post
 category: blog
 author: giuliolodi
 image: /assets/blog/20190506/dlanor-s-703975-unsplash.jpg
+headerImage: true
 date: 2019-05-06
-description: >
-   How I tried to reproduce a VSCode-like
-   experience for Flutter on Spacemacs.
+description: How I tried to reproduce a VSCode-like experience for Flutter on Spacemacs.
 ---
 
 What happens if we mix a really good emacs distribution with a natively-compiled, 
@@ -47,7 +46,7 @@ It's essentially a community-driven emacs config that comes bundled with [evil](
 It allows you to have immediate access to a usable emacs experience without 
 necessarily learning elisp.
 
-* * *
+---
 
 # Install packages
 
@@ -60,6 +59,8 @@ export PATH="$HOME/.pub-cache/bin:$PATH"
 export PATH="$HOME/.../flutter/bin/cache/dart-sdk/bin:$PATH"
 export PATH="$HOME/.../flutter/bin:$PATH"
 ```
+
+---
 
 ## dart 
 
@@ -76,6 +77,8 @@ be able to add the following under configuration-layers:
 ```
 
 This will enable dart-mode in Spacemacs and allow format on save.
+
+---
 
 ## flutter
 
@@ -100,6 +103,8 @@ remap all of this.
 Yes, I like white themes.
 {:.figure}
 
+---
+
 ## LSP
 
 Language Server Protocol (LSP) defines the protocol between an IDE and a language server. 
@@ -115,6 +120,8 @@ __dotspacemacs/user-config__:
 ```elisp
 (add-hook 'dart-mode-hook 'lsp)
 ```
+
+---
 
 ## highlight-indent-guides
 
@@ -135,6 +142,8 @@ following under user-config:
 	<img src="/assets/blog/20190506/highlight.png">
 </div>
 
+---
+
 ## evil-commentary
 
 This is just a handy package that quickly comments out code. It can automatically
@@ -149,6 +158,8 @@ type __gc__.
 <div align="center">
 	<img src="/assets/blog/20190506/evil-commentary.gif">
 </div>
+
+---
 
 ## useful config for smartparens
 
@@ -165,11 +176,13 @@ included in Spacemacs. Add this under your user-config:
 It makes it easy to create a new widget by creating and indenting a new line after
 you press __RET__ on an opening parenthesis.
 
-* * *
+---
 
 # Useful tricks
 
 There are a bunch of commands that I've found useful when developing in Flutter.
+
+---
 
 ## % to select, move and delete widgets
 
@@ -186,6 +199,8 @@ bracket (round, curly or square) to its corresponding closing bracket.
 You can then type __d__ to delete the widget and then type __p__ to paste it wherever 
 you want. After a few tries you'll become really fast.
 
+---
+
 ## SPC v to expand region
 
 This really cool Spacemacs command allows you to select an expanding region of text
@@ -199,6 +214,8 @@ __V__ to contract it.
 	<img src="/assets/blog/20190506/trickSPCv.gif">
 </div>
 
+---
+
 ## > and < to indent and outdent
 
 Pretty simple, but can come in handy. Select your code and then 
@@ -207,6 +224,8 @@ type __>__ to indent or __<__ to outdent the code.
 <div align="center">
 	<img src="/assets/blog/20190506/trickindent.gif">
 </div>
+
+---
 
 ## , G e to show errors
 
@@ -223,6 +242,8 @@ and press __RET__ to open that file in the last window used.
 	<img src="/assets/blog/20190506/trickerrors.gif">
 </div>
 
+---
+
 ## , ? and , g d to look at documentation/implementation
 
 If you need to look at a doc, you can type __, ?__ on the name of the class/function
@@ -233,6 +254,8 @@ also open the class implementation on a separate buffer by typing __, g d__.
 	<img src="/assets/blog/20190506/trickdoc.gif">
 </div>
 
+---
+
 ## , f f to find references
 
 If you need to find all the references of a class or method - for example if you 
@@ -240,7 +263,7 @@ want to find what screen is including a specific widget - you can type __, f f__
 while keeping the cursor under the name. This will open a new buffer with all its
 references.
 
-* * *
+---
 
 # Emulators
 
@@ -249,6 +272,8 @@ VS Code allows you to select what emulator you want to test your app on.
 Unfortunately I haven't found any particularly good solutions to reproduce
 the same behavior on emacs, so the best option is to use your regular 
 terminal to launch either emulators.
+
+---
 
 ## Android
 
@@ -266,6 +291,8 @@ $ANDROID_SDK/emulator
 $ANDROID_SDK/tools
 ```
 
+---
+
 ## iPhone
 
 ```
@@ -274,12 +301,14 @@ open -a Simulator.app
 
 This obviously only works under macOS. 
 
-* * *
+---
 
 ## Ok, but how is it compared to VS Code? 
 
 Well, I don't think it brings any revolutionary new feature to the game, but emacs
 is a world on its own that I think it's worth exploring.
+
+---
 
 ## Why not straight Emacs then?
 
