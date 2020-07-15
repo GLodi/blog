@@ -4,8 +4,12 @@ layout: post
 category: blog
 author: giuliolodi
 image: /assets/blog/20190506/dlanor-s-703975-unsplash.jpg
-headerImage: true
-date: 2019-05-06
+headerImage: false
+tag:
+- flutter
+- spacemacs
+- emacs
+date: 2019-05-06 10:00
 description: How I tried to reproduce a VSCode-like experience for Flutter on Spacemacs.
 ---
 
