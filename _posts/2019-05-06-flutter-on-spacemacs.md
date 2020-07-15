@@ -1,6 +1,6 @@
 ---
 title: Flutter on Spacemacs
-image: /assets/img/blog/20190506/dlanor-s-703975-unsplash.jpg
+image: /assets/blog/20190506/dlanor-s-703975-unsplash.jpg
 description: >
    How I tried to reproduce a VSCode-like
    experience for Flutter on Spacemacs.
@@ -92,7 +92,7 @@ overlay (flutter-performance-overlay - P) and so on. Most importantly you can
 __hot-reload__ with __r__ and __restart__ with __R__. Needless to say you can
 remap all of this.
 
-![Full-width image](/assets/img/blog/20190506/flutter.png){:.lead data-width="800" align="center"}
+![Full-width image](/assets/blog/20190506/flutter.png){:.lead data-width="800" align="center"}
 Yes, I like white themes.
 {:.figure}
 
@@ -128,7 +128,7 @@ following under user-config:
 ```
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/highlight.png">
+	<img src="/assets/blog/20190506/highlight.png">
 </div>
 
 ## evil-commentary
@@ -143,7 +143,7 @@ Type __gcap__ to comment a paragraph, or highlight a text in visual mode and the
 type __gc__.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/evil-commentary.gif">
+	<img src="/assets/blog/20190506/evil-commentary.gif">
 </div>
 
 ## useful config for smartparens
@@ -176,7 +176,7 @@ This is the perfect situation to use __%__. It allows you to jump from an openin
 bracket (round, curly or square) to its corresponding closing bracket.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/trickselect.gif">
+	<img src="/assets/blog/20190506/trickselect.gif">
 </div>
 
 You can then type __d__ to delete the widget and then type __p__ to paste it wherever 
@@ -192,7 +192,7 @@ Type __SPC v__ to enable it, and then keep pressing __v__ to expand the region, 
 __V__ to contract it.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/trickSPCv.gif">
+	<img src="/assets/blog/20190506/trickSPCv.gif">
 </div>
 
 ## > and < to indent and outdent
@@ -201,7 +201,7 @@ Pretty simple, but can come in handy. Select your code and then
 type __>__ to indent or __<__ to outdent the code.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/trickindent.gif">
+	<img src="/assets/blog/20190506/trickindent.gif">
 </div>
 
 ## , G e to show errors
@@ -216,7 +216,7 @@ You can move through the list buffer just like you would on a normal file,
 and press __RET__ to open that file in the last window used.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/trickerrors.gif">
+	<img src="/assets/blog/20190506/trickerrors.gif">
 </div>
 
 ## , ? and , g d to look at documentation/implementation
@@ -226,7 +226,7 @@ to open its relevant documentation in a mini-buffer on the bottom. You can
 also open the class implementation on a separate buffer by typing __, g d__.
 
 <div align="center">
-	<img src="/assets/img/blog/20190506/trickdoc.gif">
+	<img src="/assets/blog/20190506/trickdoc.gif">
 </div>
 
 ## , f f to find references
