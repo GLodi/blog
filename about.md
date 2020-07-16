@@ -4,19 +4,10 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p>Lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Hi! My name is Giulio Lodi (@glodi). I'm a holder of a Bachelor in Computer Engineering from Politecnico di Milano.</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>I've always been curious and passionate about technology, electronics and software development. I started with 
+Android and Flutter applications, and recently moved to back-end with Golang. My internship involved RubyOnRails.</p>
 
 <h2>Skills</h2>
 
@@ -27,7 +18,10 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<li>NodeJS</li>
 	<li>Git</li>
 	<li>Python</li>
-	<li>MySQL - MongoDB</li>
+	<li>MySQL</li>
+	<li>Redis</li>
+	<li>MongoDB</li>
+	<li>RubyOnRails</li>
 </ul>
 
 <h2>Projects</h2>
