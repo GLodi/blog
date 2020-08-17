@@ -9,7 +9,7 @@ layout: page
 <p>My name is Giulio Lodi (@glodi), Bachelor in Computer Engineering at Politecnico di Milano.</p>
 
 <p>I've always been a curious guy and passionate about technology, electronics and software development. I started with 
-Android and Flutter applications, and recently moved to back-end with Golang.</p>
+Android and Flutter applications, and recently moved to backend with Golang.</p>
 
 <p>My internship at <a href="https://www.prex.it">Prex</a> involved the development of an e-learning web platform in RubyOnRails.</p>
 
