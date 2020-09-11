@@ -25,8 +25,7 @@ me to learn some new languages and technologies. This is my first attempt at a R
 with Golang backend supported by a Redis cache with MongoDB, all connected through WebSockets. 
 
 This doesn't want to be a step-by-step development guide, but rather a summary of all the things
-I learned. You can find the GitHub repository with a Docker environment 
-[here](https://github.com/GLodi/justonecanvas).
+I learned.
  
 ---
 
@@ -187,7 +186,9 @@ using Javascript typed arrays.
 
 Those are the building block, but how do they communicate with each other?
 
-![Markdown Image][/assets/blog/20200829/jocupdate.png]{: class="bigger-image" }
+<div align="center">
+	<img src="/assets/blog/20200829/jocupdate.png">
+</div>
 
 At startup, our Golang backend simply populates the Redis container. It reads the entire canvas from MongoDB
 and sets a BITFIELD. This is actually a major difference from Reddit's approach: I treat Redis as an in-memory
@@ -197,13 +198,17 @@ Then, a goroutine handles a 10 seconds periodic write to MongoDB, so as to updat
 
 Let's see what happens when a user establishes a connection.
 
-![Markdown Image][/assets/blog/20200829/jocget.png]{: class="bigger-image" }
+<div align="center">
+	<img src="/assets/blog/20200829/jocget.png">
+</div>
 
 In this instance, a client makes 2 separate requests: the first is a simple REST call to `/api/v1/canvas` to 
 get the entire canvas in JSON form that displays to the user, the second to `/api/v1/canvas/ws` 
 is used to establish a WebSocket connection and signal that it's ready to receive other players' moves.
 
-![Markdown Image][/assets/blog/20200829/jocput.png]{: class="bigger-image" }
+<div align="center">
+	<img src="/assets/blog/20200829/jocput.png">
+</div>
 
 At last, what happens when a user moves? Thanks to WebSocket's full-duplex nature, it's simply a matter of
 encoding a message like `{color,x,y}` and sending it. Our backend then stores the move in Redis' canvas
@@ -268,7 +273,9 @@ effectively squares). While there are [much bigger](https://pixelplace.io/) clon
 my goal here was to learn, not replicate the same experience. Furthermore, thanks to Docker I built
 the entire system to be size-indipendent: making it bigger should be trivial given more power.
 
-![Markdown Image][/assets/blog/20200829/picture.png]{: class="bigger-image" }
+<div align="center">
+	<img src="/assets/blog/20200829/picture.png">
+</div>
 
 Aside from regular pixel-squares, the right side of the canvas shows all colored-squares available to
 use. By making them draggable, the user can drag-and-drop them on any regular square, therefore sending 
