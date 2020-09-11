@@ -4,10 +4,14 @@ layout: page
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
-<p>Hi! My name is Giulio Lodi (@glodi), Bachelor in Computer Engineering at Politecnico di Milano.</p>
+<p>Hi!</p>
 
-<p>I've always been curious and passionate about technology, electronics and software development. I started with 
-Android and Flutter applications, and recently moved to back-end with Golang. My internship involved RubyOnRails.</p>
+<p>My name is Giulio Lodi (@glodi), Bachelor in Computer Engineering at Politecnico di Milano.</p>
+
+<p>I've always been a curious guy and passionate about technology, electronics and software development. I started with 
+Android and Flutter applications, and recently moved to backend with Golang.</p>
+
+<p>My internship at <a href="https://www.prex.it">Prex</a> involved the development of an e-learning web platform in RubyOnRails.</p>
 
 <p>mail: lodi.giulio@gmail.com</p>
 
