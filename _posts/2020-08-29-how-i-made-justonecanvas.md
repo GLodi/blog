@@ -55,7 +55,7 @@ It was kind of incredible: being able to simply spin
 up a container with my server/Redis/Mongo without any kind of provisioning or configuration (almost)
 was a game changer.
 
-`docker-compose` also smoothed operations by providing a simple, convenient way of describing
+<span class="evidence">docker-compose</span> also smoothed operations by providing a simple, convenient way of describing
 my containers and allowing them to talk to each other.
 
 ---
@@ -96,7 +96,7 @@ func (ds *dserver) canvasRoutes(api *gin.RouterGroup) {
 Thanks to Docker, setting up Redis was very simple. In their blog post, Reddit explained how they used
 a [BITFIELD](https://redis.io/commands/bitfield) to store each pixel of the canvas. BITFIELD allows
 us to treat a Redis string as an array of bits and referencing specific integers of varying bits at
-arbitrary offsets. Thanks to `go-redis` I implemented it like this:
+arbitrary offsets. Thanks to <span class="evidence">go-redis</span> I implemented it like this:
 
 ```golang
 for i := 0; i < constants.Squares; i++ {
@@ -156,7 +156,8 @@ if err != nil {
 }
 ```
 
-Which in case a `canvas` document can't be found generates a new oone and fills it with white squares.
+Which in case a 
+<span class="evidence">canvas</span> document can't be found generates a new oone and fills it with white squares.
 
 I took the opportunity to do some little tests with Redis and Mongo. In the first version of 
 justonecanvas I developed a very simple CRUD application with Mongo, and only after that I moved to 
@@ -164,7 +165,7 @@ implement a Redis version. I profiled both systems with JSON and binary formats,
 [gob](https://golang.org/pkg/encoding/gob/), and the binary format allows for a much faster (50%) response
 time.
 
-Numbers show times in millisecond that gin took to handle a GET on `/api/v1/canvas`, therefore returning
+Numbers show times in millisecond that gin took to handle a GET on <span class="evidence">/api/v1/canvas</span>, therefore returning
 the entire board. No huge differences there.
 
 ### WebSockets
@@ -172,14 +173,14 @@ the entire board. No huge differences there.
 This was also the first time I dealt with WebSockets. In a situation like this, where you have the need
 for full-duplex communication over a browser, it's the ideal solution.
 
-As for implementation I looked at `gorilla/websocket`'s [chat](https://github.com/gorilla/websocket/tree/master/examples/chat) example, which provides a Hub
+As for implementation I looked at <span class="evidence">gorilla/websocket's</span> [chat](https://github.com/gorilla/websocket/tree/master/examples/chat) example, which provides a Hub
 that stores the references to all clients' connections as well as a way to broadcast messages to all of them.
 
 What's important to notice here, is that 2 goroutines are allocated for each client, ReadPump and WritePump,
 which obviously handle read and write operations. This however didn't seem like a very scalable solution, as
 I'll discuss below.
 
-On the Typescript side, I made sure to set the connection's binary type to `arraybuffer`: a generic fixed-length
+On the Typescript side, I made sure to set the connection's binary type to <span class="evidence">arraybuffer</span>: a generic fixed-length
 container for binary data which allows for the creation of "[views](https://blog.mgechev.com/2015/02/06/parsing-binary-protocol-data-javascript-typedarrays-blobs/)"
 using Javascript typed arrays.
 
@@ -203,8 +204,8 @@ Let's see what happens when a user establishes a connection.
 	<img src="/assets/blog/20200829/jocget.png">
 </div>
 
-In this instance, a client makes 2 separate requests: the first is a simple REST call to `/api/v1/canvas` to 
-get the entire canvas in JSON form that displays to the user, the second to `/api/v1/canvas/ws` 
+In this instance, a client makes 2 separate requests: the first is a simple REST call to <span class="evidence">/api/v1/canvas</span> to 
+get the entire canvas in JSON form that displays to the user, the second to <span class="evidence">/api/v1/canvas/ws</span> 
 is used to establish a WebSocket connection and signal that it's ready to receive other players' moves.
 
 <div align="center">
@@ -212,7 +213,7 @@ is used to establish a WebSocket connection and signal that it's ready to receiv
 </div>
 
 At last, what happens when a user moves? Thanks to WebSocket's full-duplex nature, it's simply a matter of
-encoding a message like `{color,x,y}` and sending it. Our backend then stores the move in Redis' canvas
+encoding a message like <span class="evidence">{color,x,y}</span> and sending it. Our backend then stores the move in Redis' canvas
 and proceeds to broadcast the same message to all players.
 
 ### Rate Limiting
@@ -221,8 +222,8 @@ I don't trust the internet.
 
 And neither should you when you grant them free, public, write access to a service. 
 
-Justonecanvas has only two API endpoints: a regular REST `/api/v1/canvas` that returns the current
-state of the canvas in JSON format, and a WebSocket `/api/v1/canvas/ws` that establishes the
+Justonecanvas has only two API endpoints: a regular REST <span class="evidence">/api/v1/canvas</span> that returns the current
+state of the canvas in JSON format, and a WebSocket <span class="evidence">/api/v1/canvas/ws</span> that establishes the
 connection and sets the client for receiving move updates.
 
 I decided to limit the damage possible on the former by implementing a simple 
@@ -262,7 +263,7 @@ Interfaces outside of mobile applications - I decided to go for a very basic
 
 Admittedly, this ended up being overkill. For a web app this simple, a complex solution like React is
 not needed. There's no need to track any state, and the project consists only of 2 pages 
-(one of which is `/about`). Most of the frontend development involved
+(one of which is /about). Most of the frontend development involved
 [react-konva](https://github.com/konvajs/react-konva)
 
 ### React-Konva
@@ -270,7 +271,7 @@ not needed. There's no need to track any state, and the project consists only of
 This really cool Javascript library provides declarative and reactive bindings to the 
 [Konva Framework](https://konvajs.org/). I managed to create the 65x65 canvas, which in Konva terms
 is a two-dimensional array of [Rects](https://konvajs.org/api/Konva.Rect.html) (in my case
-effectively squares). While there are [much bigger](https://pixelplace.io/) clones of `r/place`,
+effectively squares). While there are [much bigger](https://pixelplace.io/) clones of <span class="evidence">r/place</span>,
 my goal here was to learn, not replicate the same experience. Furthermore, thanks to Docker I built
 the entire system to be size-indipendent: making it bigger should be trivial given more power.
 
@@ -293,7 +294,7 @@ now though, it does the job.
 
 # Load Testing
 
-I decided to test the capabilities of `gorilla/websocket` with
+I decided to test the capabilities of <span class="evidence">gorilla/websocket</span> with
 [artillery](https://github.com/artilleryio/artillery/). It allows me to make thousands of fake users that
 send predetermined moves to the server.
 
@@ -329,9 +330,9 @@ function createTimestampedObject(userContext, _, done) {
 }
 ```
 
-This is run with `artillery run loadtest.yml`.
+This is run with <span class="evidence">artillery run loadtest.yml</span>.
 
-The idea is to spawn 30 users per second for 600 seconds. Each user sends a simple `[1,1,1]` (blue pixel
+The idea is to spawn 30 users per second for 600 seconds. Each user sends a simple <span class="evidence">[1,1,1]</span> (blue pixel
 at position 1,1) message and then waits 10 minutes, whilst receiving all subsequent messages.
 
 I began load testing while I was on vacation, so I could only test with my MacbookPro. I noticed that
@@ -386,10 +387,10 @@ For now though, I'm happy with the results and I doubt justonecanvas will receiv
 # Digital Ocean
 
 Thanks to Docker's flexibility, setting up my server was just a matter of selecting
-a Docker [droplet](https://marketplace.digitalocean.com/apps/docker) and `docker-compose up`.
+a Docker [droplet](https://marketplace.digitalocean.com/apps/docker) and <span class="evidence">docker-compose up</span>.
 
-I had no experience with Nginx. Making sure that WebSocket connections would be upgraded and `http` traffic
-redirected to `https` was just a matter of:
+I had no experience with Nginx. Making sure that WebSocket connections would be upgraded and <span class="evidence">http</span> traffic
+redirected to <span class="evidence">https</span> was just a matter of:
 
 ```conf
   map $http_upgrade $connection_upgrade {
@@ -431,8 +432,8 @@ redirected to `https` was just a matter of:
       }
 ```
 
-The only annoying part was setting up `https`, specifically working with [certbot](https://certbot.eff.org/).
-For a while, I considered the option of implementing a `certbot` image inside Docker, so as to make `https`
+The only annoying part was setting up <span class="evidence">https</span>, specifically working with [certbot](https://certbot.eff.org/).
+For a while, I considered the option of implementing a <span class="evidence">certbot</span> image inside Docker, so as to make <span class="evidence">https</span>
 deployment 100% platform-indipendent. This however was more of a pain than I anticipated. I eventually
 opted for a droplet-based [guide](https://www.digitalocean.com/community/tutorials/how-to-use-certbot-standalone-mode-to-retrieve-let-s-encrypt-ssl-certificates-on-ubuntu-1804) to handle it outside of Docker, and then setup my frontend image to 
 mount the file from host like so:
