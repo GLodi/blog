@@ -1,7 +1,8 @@
 ---
 title: "How I Made justonecanvas.live"
 layout: post
-category: projects
+category: project
+projects: true
 author: giuliolodi
 image: /assets/blog/20200829/picture.png
 headerImage: true
