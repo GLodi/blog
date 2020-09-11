@@ -158,19 +158,11 @@ if err != nil {
 
 Which in case a `canvas` document can't be found generates a new oone and fills it with white squares.
 
-I took the opportunity to do some little benchmarks with Redis and Mongo. In the first version of 
+I took the opportunity to do some little tests with Redis and Mongo. In the first version of 
 justonecanvas I developed a very simple CRUD application with Mongo, and only after that I moved to 
 implement a Redis version. I profiled both systems with JSON and binary formats, specifically Golang's own
-[gob](https://golang.org/pkg/encoding/gob/).
-
-It cannot be defined as a thorough benchmark, as it was just aimed to give me an idea of the differences:
-
-|--------------|----|---|----|----|
-| mongo-json   | 6  | 7 | 11 | 12 |
-| redis-json   | 12 | 7 | 6  | 7  |
-| mongo-binary | 4  | 5 | 9  | 5  |
-| redis-binary | 5  | 5 | 3  | 4  |
-|--------------|----|---|----|----|
+[gob](https://golang.org/pkg/encoding/gob/), and the binary format allows for a much faster (50%) response
+time.
 
 Numbers show times in millisecond that gin took to handle a GET on `/api/v1/canvas`, therefore returning
 the entire board. No huge differences there.
@@ -195,7 +187,7 @@ using Javascript typed arrays.
 
 Those are the building block, but how do they communicate with each other?
 
-![Markdowm Image][/assets/blog/20200829/jocupdate.png]{: class="bigger-image" }
+![Markdown Image][/assets/blog/20200829/jocupdate.png]{: class="bigger-image" }
 
 At startup, our Golang backend simply populates the Redis container. It reads the entire canvas from MongoDB
 and sets a BITFIELD. This is actually a major difference from Reddit's approach: I treat Redis as an in-memory
@@ -205,13 +197,13 @@ Then, a goroutine handles a 10 seconds periodic write to MongoDB, so as to updat
 
 Let's see what happens when a user establishes a connection.
 
-![Markdowm Image][/assets/blog/20200829/jocget.png]{: class="bigger-image" }
+![Markdown Image][/assets/blog/20200829/jocget.png]{: class="bigger-image" }
 
 In this instance, a client makes 2 separate requests: the first is a simple REST call to `/api/v1/canvas` to 
 get the entire canvas in JSON form that displays to the user, the second to `/api/v1/canvas/ws` 
 is used to establish a WebSocket connection and signal that it's ready to receive other players' moves.
 
-![Markdowm Image][/assets/blog/20200829/jocput.png]{: class="bigger-image" }
+![Markdown Image][/assets/blog/20200829/jocput.png]{: class="bigger-image" }
 
 At last, what happens when a user moves? Thanks to WebSocket's full-duplex nature, it's simply a matter of
 encoding a message like `{color,x,y}` and sending it. Our backend then stores the move in Redis' canvas
@@ -276,7 +268,7 @@ effectively squares). While there are [much bigger](https://pixelplace.io/) clon
 my goal here was to learn, not replicate the same experience. Furthermore, thanks to Docker I built
 the entire system to be size-indipendent: making it bigger should be trivial given more power.
 
-// TODO: metti immagine canvas
+![Markdown Image][/assets/blog/20200829/picture.png]{: class="bigger-image" }
 
 Aside from regular pixel-squares, the right side of the canvas shows all colored-squares available to
 use. By making them draggable, the user can drag-and-drop them on any regular square, therefore sending 
@@ -439,11 +431,9 @@ mount the file from host like so:
 
 ```yml
   client:
-	...
     volumes:
       - /etc/letsencrypt/live/justonecanvas.live/fullchain.pem:/etc/nginx/certs/fullchain.pem
       - /etc/letsencrypt/live/justonecanvas.live/privkey.pem:/etc/nginx/certs/privkey.pem
-	...
 ```
 
 ---
