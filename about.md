@@ -29,6 +29,7 @@ Android and Flutter applications, and recently moved to back-end with Golang. My
 <h2>Projects</h2>
 
 <ul>
-	<li><a href="https://github.com/GLodi/GitNav">GitNav</a></li>
+	<li><a href="https://github.com/GLodi/justonecanvas">justonecanvas</a></li>
 	<li><a href="https://github.com/GLodi/matchymatchy">matchymatchy</a></li>
+	<li><a href="https://github.com/GLodi/GitNav">GitNav</a></li>
 </ul>

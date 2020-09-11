@@ -33,8 +33,6 @@ Nowadays there are [multiple](https://www.opensubtitles.org/en/search/subs) data
 online for that. Some even allow you to simply drop your video file unto them and it will
 show you all related .srts.
 
----
-
 ## What if I have an .mkv with embedded subtitles?
 
 You first need to extract your .srt from the .mkv's tracks. You can use [this](https://mkvtoolnix.download/index.html).
