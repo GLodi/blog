@@ -21,7 +21,7 @@ description: My journey through Go, Redis, Websockets...
 
 [Link to GitHub repo](https://github.com/GLodi/justonecanvas)
  
-Wanting to make the most of the pandemic, I decided to do a side project that would allow 
+Hoping to make the most of the pandemic, I decided to do a side project that would allow 
 me to learn some new languages and technologies. This is my first attempt at a React website
 with Golang backend supported by a Redis cache with MongoDB, all connected through WebSockets. 
 
