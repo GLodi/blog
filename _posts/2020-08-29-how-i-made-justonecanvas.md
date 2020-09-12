@@ -449,7 +449,7 @@ mount the file from host like so:
 
 # Conclusions
 
-Againg, this doesn't want to be a guide on any of the topics covered. It was just my recollection of the many
+Again, this doesn't want to be a guide on any of the topics covered. It was just my recollection of the many
 things I learned while developing [justonecanvas.live](https://justonecanvas.live/).
 
 Hope you found it useful too.
