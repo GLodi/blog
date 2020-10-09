@@ -12,8 +12,8 @@ layout: page
 I started with Android and Flutter applications, and then backend with Golang. 
 Recently I've been building emulators with Rust.</p>
 
-<p>I'm currently working as a Backend Developer at <a href="https://www.prex.it">Prex</a> while studying to get 
-my Master's in Computer Science.</p>
+<p>I'm currently working as a Backend Developer at <a href="https://www.prex.it">Prex</a> on RubyOnRails 
+while studying to get my Master's in Computer Science.</p>
 
 <p>email: lodi.giulio@gmail.com</p>
 
