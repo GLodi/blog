@@ -6,14 +6,13 @@ layout: page
 
 <p>Hi!</p>
 
-<p>My name is Giulio Lodi (@glodi), Bachelor in Computer Engineering at Politecnico di Milano.</p>
+<p>My name is Giulio Lodi (@glodi), Backend Developer at <a href="https://www.prex.it">Prex</a>. Bachelor in Computer Engineering at Politecnico di Milano.</p>
 
 <p>I've always been a curious guy and passionate about technology, electronics and software development. 
 I started with Android and Flutter applications, and then backend with Golang. 
 Recently I've been building emulators with Rust.</p>
 
-<p>I'm currently working as a Backend Developer at <a href="https://www.prex.it">Prex</a> on RubyOnRails 
-while studying to get my Master's in Computer Science.</p>
+<p>I'm currently working on RubyOnRails while studying to get my Master's in Computer Science.</p>
 
 <p>email: lodi.giulio@gmail.com</p>
 
