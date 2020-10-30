@@ -20,21 +20,22 @@ I started with Android and Flutter applications, and then backend with Golang.<p
 <h2>Skills</h2>
 
 <ul class="skill-list">
+	<li>Rust</li>
+	<li>RubyOnRails</li>
 	<li>Android</li>
+	<li>Kotlin</li>
+	<li>Java</li>
 	<li>Flutter</li>
 	<li>Golang</li>
-	<li>NodeJS</li>
-	<li>Git</li>
 	<li>Python</li>
-	<li>MySQL</li>
 	<li>Redis</li>
 	<li>MongoDB</li>
-	<li>RubyOnRails</li>
 </ul>
 
 <h2>Projects</h2>
 
 <ul>
+	<li><a href="https://github.com/GLodi/chip8emu">Chip8 emulator</a></li>
 	<li><a href="https://github.com/GLodi/justonecanvas">justonecanvas</a></li>
 	<li><a href="https://github.com/GLodi/matchymatchy">matchymatchy</a></li>
 	<li><a href="https://github.com/GLodi/GitNav">GitNav</a></li>
