@@ -15,7 +15,7 @@ I started with Android and Flutter applications, and then backend with Golang.<p
 
 <p>I'm currently working as a RubyOnRails developer while studying to get my Master's in Computer Science.</p>
 
-<p>email: lodi.giulio@gmail.com</p>
+<p>email: lodi dot giulio at gmail dot com</p>
 
 <h2>Skills</h2>
 
