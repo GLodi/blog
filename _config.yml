@@ -1,6 +1,6 @@
 # main text of home
 name: Giulio Lodi
-bio: Flutter Golang Rust. One espresso at a time.
+bio: Flutter RubyOnRails Rust. One espresso at a time.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -55,7 +55,7 @@ email: lodi.giulio@gmail.com
 authors:
   giuliolodi:
     name: Giulio Lodi
-    bio: Flutter Golang Rust. One espresso at a time.
+    bio: Flutter RubyOnRails Rust. One espresso at a time.
     external-image: false
     picture: assets/images/profile.jpg
 
